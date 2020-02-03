@@ -1,0 +1,37 @@
+/*
+Напишите метод который вернет количество слов в строке текста.
+*/
+
+package homeMaxNumber;
+
+import java.util.Arrays;
+
+public class Main {
+	 static int count (String s) {
+		 int x = 0;
+		 int count = 0;
+		 String time = " ";
+		 for(int i = 0 ; i < s.length() ; i++) {
+			 x = s.indexOf(time , x);
+			 if(x == i) {
+				 x += time.length();
+				 count++;
+				 
+			 }
+		 }
+			
+	 		 return count+1;
+	}
+	public static void main(String[] args) {
+		String words = "Напишите метод который вернет максимальное число из массива целых "
+				+ "чисел. Реализуйте метод параметрами которого явл яются целое число"
+;
+		
+		
+		System.out.println(count(words));
+		
+
+
+	}
+
+}
