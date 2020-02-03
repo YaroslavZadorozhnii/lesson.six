@@ -1,0 +1,21 @@
+/*
+2) Реализуйте метод параметрами которого 
+являются  - целое число, вещественное число и строка.
+Возвращает он конкатенацию строки
+с суммой вещественного и целого числа.
+*/
+
+public class Main {
+	 static String cont (int a, double b, String c ) {
+		 String z = (c + (a + b));
+		 return z;
+		}
+	public static void main(String[] args) {
+		int a = 1;
+		double b = 1.01;
+		String s = "Суммой a + b является ";
+
+		System.out.println(cont(a,b,s));
+	}
+
+}
