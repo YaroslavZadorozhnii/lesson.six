@@ -1,0 +1,41 @@
+/*
+4) Напишите метод который реализует линейный 
+поиск элемента в массиве целых чисел. 
+Если такой элемент в массиве есть то верните его индекс, 
+если нет то метод должен возвращать число - «-1
+*/
+
+package homeMaxNumber;
+
+import java.util.Arrays;
+
+public class Main {
+	 static int[]  ind (int[] a, int b) {
+			String s = new String(); // я так понимаю, что при добавлении символов в эту строку и последующем ее делении на массив
+			int n = 0; 
+			 for(int i = 0 ; i < a.length ; i++) {
+				 if(a[i] == b) {
+					 s = s + "," +Integer.toString(i); // на 0м индексе полученного масива я буду иметь null.
+					 n++;
+				 }
+			 }
+			 String[] in = s.split(",");
+			 int[] ind = new int[n];
+			 for(int i = 0 ; i < n ; i++) {
+				ind[i] = Integer.parseInt(in[i+1]); // потому добавил сюда +1
+			 }
+	 		 return ind;
+	}
+	public static void main(String[] args) {
+		int[] a = new int[] {2,15,4,78,2,45,4,1,9,8,3,2,7,14,69,6,8,79,2,0,67,2,3,7,9,6};
+		int b = 2;
+		
+		
+		System.out.println("Индексы массива с совпадениями");
+		System.out.println(Arrays.toString(ind(a,b)));
+		
+
+
+	}
+
+}
